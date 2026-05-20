@@ -1,0 +1,137 @@
+/* assets/css/inicio.css - styles for auth forms (login/register) */
+:root {
+    --primary: #1D976C;
+    --accent: #93F9B9;
+    --radius: 25px;
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: var(--font);
+}
+
+.auth-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.form-container {
+    width: min(420px, 100%);
+    margin: 0 auto;
+    padding: 28px 26px;
+    background: var(--bg-card, #fff);
+    border: 1px solid var(--border-color, rgba(0, 0, 0, .08));
+    border-radius: 16px;
+    box-shadow: var(--shadow, 0 10px 30px rgba(0, 0, 0, .12));
+}
+
+.form-container h2 {
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--primary-color, var(--primary));
+    color: var(--text-on-primary, #fff);
+    transition: transform .06s ease, filter .2s ease;
+}
+
+.form-container button:active {
+    transform: translateY(1px)
+}
+
+.form-container button:hover {
+    filter: brightness(1.02)
+}
+
+.form-container p {
+    margin-top: 12px;
+    text-align: center
+}
+
+.form-container .alert {
+    margin-bottom: 12px
+}
+
+.form-container a {
+    display: inline-block
+}
+
+.form-container label {
+    color: var(--text-main, #1E293B)
+}
+
+.form-container input[type="checkbox"] {
+    accent-color: var(--primary-color, var(--primary))
+}
+
+.form-container {
+    position: relative;
+    overflow: hidden
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    top: -180px;
+    right: -180px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    opacity: .12;
+    z-index: 0;
+    pointer-events: none
+}
+
+.form-container button {
+    position: relative;
+    z-index: 1
+}
+
+.form-container h2 {
+    position: relative;
+    z-index: 1
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    position: relative;
+    z-index: 1
+}
+
+.form-container .alert {
+    position: relative;
+    z-index: 1
+}
+
+.form-container a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.form-container a:hover {
+    text-decoration: underline
+}

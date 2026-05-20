@@ -1,0 +1,305 @@
+/* ==============================
+   VARIABLES
+============================== */
+:root {
+    --verde-oscuro: #1B4332;
+    --verde: #40916C;
+    --verde-claro: #74C69D;
+    --blanco: #ffffff;
+    --gris-claro: #f5f5f5;
+    --gris: #6c757d;
+    --negro: #111;
+    --shadow: 0 15px 40px rgba(0,0,0,0.08);
+    --border-radius: 15px;
+    --transition: all 0.3s ease;
+}
+
+/* ==============================
+   RESET
+============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blanco);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--blanco);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.14);
+    color: var(--blanco);
+}
+.nav-links a.active {
+    background: rgba(255,255,255,0.22);
+    color: var(--blanco);
+}
+.nav-links a:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.6);
+    outline-offset: 2px;
+}
+.nav-links a:active {
+    background: rgba(255,255,255,0.28);
+}
+
+/* ==============================
+   BOTONES GENERALES
+============================== */
+.btn {
+    padding: 0.5rem 1.3rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+}
+
+.btn-primary:hover {
+    background: var(--verde);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--verde);
+    color: var(--verde);
+}
+
+.btn-secondary:hover {
+    background: var(--verde);
+    color: var(--blanco);
+}
+
+/* ==============================
+   HERO
+============================== */
+.hero {
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+    color: var(--blanco);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Botones hero */
+.btn-hero {
+    padding: 0.9rem 2.3rem;
+    border-radius: 40px;
+    background: var(--blanco);
+    color: var(--verde-oscuro);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-hero:hover {
+    background: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+    transform: translateY(-3px);
+}
+
+.btn-secondary-hero {
+    background: transparent;
+    border: 2px solid var(--blanco);
+    color: var(--blanco);
+}
+
+.btn-secondary-hero:hover {
+    background: var(--blanco);
+    color: var(--verde-oscuro);
+}
+
+/* Círculos decorativos */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    animation: float 10s infinite linear;
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.circle2 {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    right: 10%;
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-30px);}
+    100% {transform: translateY(0);}
+}
+
+/* ==============================
+   SECCIONES
+============================== */
+section {
+    padding: 4rem 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 1rem;
+}
+
+section p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    color: var(--gris);
+}
+
+/* ==============================
+   CARDS
+============================== */
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card ion-icon {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--verde-oscuro);
+}
+
+/* ==============================
+   CONTACTO
+============================== */
+.section-contacto {
+    background: var(--gris-claro);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+    background: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.9rem;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
